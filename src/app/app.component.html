@@ -1,0 +1,343 @@
+<div [ngClass]="{ dark: isDarkTheme }" >
+
+  <div class="bg-slate-100 dark:bg-gray-600 h-full">
+
+    <div class="text-xl flex justify-between font-semibold py-5 border-b-2 bg-white dark:bg-gray-800 dark:text-white dark:border-gray-800">
+            <div>
+              <i class="bi bi-arrow-left px-5"></i> 
+              CEO, Magma Fincorp, Kolkata 
+            </div>
+            <ul class="flex ">
+              <li class="text-base my-auto invisible sm:visible sm:pr-4">Light Mode</li>
+              <li><i class="bi bi-toggle-on text-4xl cursor-pointer" *ngIf="isDarkTheme" (click)="toggleTheme()"></i></li>
+              <li><i class="bi bi-toggle-off text-4xl cursor-pointer" *ngIf="!isDarkTheme" (click)="toggleTheme()"></i></li>
+              <li class="text-base my-auto pr-4 invisible sm:visible sm:pl-4">Dark Mode</li>
+            </ul>
+    </div>
+
+    <div class="m-10">
+      <h1 class="text-xl mb-5 dark:text-white">Offer Extended</h1>
+      <div class="border bg-white">
+
+        <div class="grid grid-cols-12 gap-3 m-5">
+          <div class="relative rounded-full w-20 h-20 overflow-hidden md:h-20 md:w-20">
+            <img src="assets/user.jpg" >
+          </div>
+          <div class="text-left col-span-2">
+            <h3 class="text-xl  text-teal-700">Anil Kapoor</h3>
+            <h4 class="text-sm text-gray-500">Director, Piramal Enterprises</h4>
+            <h4 class="text-sm text-gray-500">Kolkata</h4>
+          </div>
+          <div class="col-span-4 grid grid-cols-12 gap-2 text-center my-auto">
+            <div class="col-span-4 text-sm  text-gray-500 ">
+              Offer Extended On
+              <p class="text-base text-black">21 Jul 2022</p>
+            </div>
+            <div class="col-span-4 border-l text-sm  text-gray-500 ">
+              Offer Excepted On
+              <p class="text-base text-black">23 Jul 2022</p>
+            </div>
+            <div class="col-span-4 border-l text-sm  text-gray-500 ">
+              Date Of Joining
+              <p class="text-base text-black">1 Sep 2022</p>
+            </div>  
+          </div>
+          <div class="col-span-2 grid grid-cols-12 text-center">
+            <div class="col-span-6 border-l text-sm  text-gray-500 ">
+              Joining Status
+              <div class="selector m-3 cursor-pointer" style="height: 30px;width:60px;">
+                <div id="selectfield" (click)="toggleDropdown()" class="flex align-middle justify-between" >
+                  <img src="{{source}}" width="20px" height="10px">
+                  <img src="assets/Dropdown_S_Filled.png">
+                </div>
+                <ul *ngIf="isVisible" (mouseleave)="closeDropdown()" class="bg-white border mt-2" style="height: 150px;width:60px;">
+                  <li  class="p-2 border-b flex align-middle justify-center hover:bg-slate-300" (click)="functionInTypeScript(like)"  style="height: 50px;">
+                    <img #like src="assets/Selected.png" width="25px" height="8px" class="m-1" alt="">
+                  </li>
+                  <li class="p-2 border-b flex align-middle justify-center hover:bg-slate-300" (click)="functionInTypeScript(avrg)" style="height: 50px;">
+                    <img #avrg src="assets/Average.png" width="25px" height="8px" class="m-1" alt="">
+                  </li>
+                  <li class="p-2 border-b flex align-middle justify-center hover:bg-slate-300" (click)="functionInTypeScript(rwrk)" style="height: 50px;">
+                    <img #rwrk src="assets/Rework.png" width="25px" height="8px" class="m-1" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div> 
+            <div class="col-span-6 border-l text-sm  text-gray-500 ">
+              B.V
+              <div class="selector m-3 cursor-pointer" style="height: 30px;width:60px;">
+                <div id="selectfield" (click)="toggleDropdown1()" class="flex align-middle justify-between" >
+                  <img src="{{source1}}" width="20px" height="10px">
+                  <img src="assets/Dropdown_S_Filled.png">
+                </div>
+                <ul *ngIf="isVisible1" (mouseleave)="closeDropdown()" class="bg-white border mt-2" style="height: 150px;width:60px;overflow:hidden;">
+                  <li  class="p-2 border-b flex align-middle justify-center hover:bg-slate-300" (click)="functionInTypeScript1(like1)"  style="height: 50px;">
+                    <img #like1 src="assets/Selected.png" width="25px" height="8px" class="m-1" alt="">
+                  </li>
+                  <li class="p-2 border-b flex align-middle justify-center hover:bg-slate-300" (click)="functionInTypeScript1(avrg1)" style="height: 50px;">
+                    <img #avrg1 src="assets/Average.png" width="25px" height="8px" class="m-1" alt="">
+                  </li>
+                  <li class="p-2 border-b flex align-middle justify-center hover:bg-slate-300" (click)="functionInTypeScript1(rwrk1)" style="height: 50px;">
+                    <img #rwrk1 src="assets/Rework.png" width="25px" height="8px" class="m-1" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-3 grid grid-cols-12">
+            <p class="text-xs leading-5 text-gray-500 col-span-11">
+              Here I have created a search box for a basic search operation to
+              perform on the available list. The twist is its logically perfromed on 
+              old concept usage of a search.
+            </p>
+            <div class="text-2xl m-auto pl-3 text-gray-500">
+              <i class="bi bi-three-dots-vertical"></i>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="m-10 overflow-scroll">
+      <h1 class="text-xl mb-5 dark:text-white">Prospects</h1>
+      <div class="h-10 w-full border grid grid-cols-12 bg-white">
+        <h1 class="col-span-3 text-base text-gray-500 text-center my-auto uppercase">Candidate Details</h1>
+        <h1 class="col-span-4 text-base text-gray-500 text-center my-auto uppercase">Interview Schedule</h1>
+        <h1 class="col-span-2 text-base text-gray-500 text-center my-auto uppercase">Reference Check</h1>
+        <h1 class="col-span-3 text-base text-gray-500 text-center my-auto uppercase">Comments</h1>
+      </div>
+      
+      <div class="grid grid-cols-12 mt-5 gap-3 m-5 dark:text-white">
+        <div class="col-start-3 text-right my-auto">
+          <i class="bi bi-chevron-left"></i>
+        </div>
+        <div class="col-start-4 col-end-8 grid grid-cols-12 gap-2 text-center my-auto text-xs">
+          <div class="col-span-3">
+            <img src="assets/user.jpg" class="mb-1 mx-auto">
+          </div>
+          <div class="col-span-3">
+            <img src="assets/user.jpg" class="mb-1 mx-auto">
+          </div>
+          <div class="col-span-3">
+            <img src="assets/user.jpg" class="mb-1 mx-auto">
+          </div>
+          <div class="col-span-3">
+            <img src="assets/user.jpg" class="mb-1 mx-auto">
+          </div>
+        </div>
+        <div class="col-start-8 my-auto uppercase border-r border-gray-500 dark:border-white">
+          <h1 class="text-xs text-center text-gray-600 dark:text-white">Leads</h1>
+        </div>
+        <div class="col-start-9 my-auto uppercase">
+          <h1 class="text-xs text-center text-gray-600 dark:text-white">Captured</h1>
+        </div>
+      </div>
+      
+
+      <div class="border mt-5 bg-white">
+        <div class="grid grid-cols-12 gap-3 m-5">
+          <div class="relative rounded-full w-20 h-20 overflow-hidden md:h-20 md:w-20">
+            <img src="assets/user.jpg" >
+          </div>
+          <div class="text-left col-span-2">
+            <h3 class="text-xl  text-teal-700">Sanjay Kapoor</h3>
+            <h4 class="text-sm text-gray-500">Manager, Piramal Enterprises</h4>
+            <h4 class="text-sm text-gray-500">Mumbai</h4>
+          </div>
+          <div class="col-span-4 grid grid-cols-12 gap-2 text-center my-auto text-xs">
+            <div class="col-span-3  text-gray-500 ">
+              <img src="assets/Positive.png" class="mb-1 mx-auto">
+              Hire
+              <p class="mt-2">21 Jul 2022</p>
+            </div>
+            <div class="col-span-3 border-l  text-gray-500">
+              Awaiting
+              <p class="mt-2">Feedback</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500">
+              <img src="assets/Unselected.png" class="mb-1 mx-auto">
+              Undecided
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500 ">
+              <img src="assets/Calender.png" class="mb-1 mx-auto">
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+          </div>
+          <div class="col-span-2 grid grid-cols-12 text-center">
+            <div class="my-auto col-span-6 border-r">7</div>
+            <div class="my-auto col-span-6 ">8</div>
+          </div>
+          <div class="col-span-3 grid grid-cols-12">
+            <p class="text-xs leading-5 text-gray-500 col-span-11">
+              Here I have created a search box for a basic search operation to
+              perform on the available list. The twist is its logically perfromed on 
+              old concept usage of a search.
+            </p>
+            <div class="text-xl m-auto pl-3 text-gray-500 relative cursor-pointer" >
+              <i class="bi bi-three-dots-vertical" (click)="toggleSettings()"></i>
+              <ul *ngIf="isVisible2" (mouseleave)="closeDropdown()" class="absolute bottom-0 right-0 bg-white border  uppercase overflow-hidden w-40 h-20">
+                <li  class="text-sm my-2 flex align-middle justify-center" >
+                  Edit Comment
+                </li>
+                <hr>
+                <li  class="text-sm mt-2 flex align-middle justify-center"  >
+                  Hide Candidate
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border mt-5 bg-white">
+        <div class="grid grid-cols-12 gap-3 m-5">
+          <div class="relative rounded-full w-20 h-20 overflow-hidden md:h-20 md:w-20">
+            <img src="assets/user.jpg" >
+          </div>
+          <div class="text-left col-span-2">
+            <h3 class="text-xl  text-teal-700">Sanjay Kapoor</h3>
+            <h4 class="text-sm text-gray-500">Manager, Piramal Enterprises</h4>
+            <h4 class="text-sm text-gray-500">Mumbai</h4>
+          </div>
+          <div class="col-span-4 grid grid-cols-12 gap-2 text-center my-auto text-xs">
+            <div class="col-span-3  text-gray-500 ">
+              <img src="assets/Positive.png" class="mb-1 mx-auto">
+              Hire
+              <p class="mt-2">21 Jul 2022</p>
+            </div>
+            <div class="col-span-3 border-l  text-red-500">
+              Awaiting
+              <p class="mt-2">Feedback</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500">
+              <img src="assets/Unselected.png" class="mb-1 mx-auto">
+              Undecided
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500 ">
+              <img src="assets/Calender.png" class="mb-1 mx-auto">
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+          </div>
+          <div class="col-span-2 grid grid-cols-12 text-center">
+            <div class="my-auto col-span-6 border-r">7</div>
+            <div class="my-auto col-span-6 ">8</div>
+          </div>
+          <div class="col-span-3 grid grid-cols-12">
+            <p class="text-xs leading-5 text-gray-500 col-span-11">
+              No Comments
+            </p>
+            <div class="text-2xl m-auto pl-3 text-gray-500">
+              <i class="bi bi-three-dots-vertical"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border mt-5 bg-white">
+        <div class="grid grid-cols-12 gap-3 m-5">
+          <div class="relative rounded-full w-20 h-20 overflow-hidden md:h-20 md:w-20">
+            <img src="assets/user.jpg" >
+          </div>
+          <div class="text-left col-span-2">
+            <h3 class="text-xl  text-teal-700">Sanjay Kapoor</h3>
+            <h4 class="text-sm text-gray-500">Manager, Piramal Enterprises</h4>
+            <h4 class="text-sm text-gray-500">Mumbai</h4>
+          </div>
+          <div class="col-span-4 grid grid-cols-12 gap-2 text-center my-auto text-xs">
+            <div class="col-span-3  text-gray-500 ">
+              <img src="assets/Positive.png" class="mb-1 mx-auto">
+              Hire
+              <p class="mt-2">21 Jul 2022</p>
+            </div>
+            <div class="col-span-3 border-l  text-gray-500">
+              Awaiting
+              <p class="mt-2">Feedback</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500">
+              <img src="assets/Unhire.png" class="mb-1 mx-auto">
+              No Hire
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500 ">
+              <img src="assets/Calender.png" class="mb-1 mx-auto">
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+          </div>
+          <div class="col-span-2 grid grid-cols-12 text-center">
+            <div class="my-auto col-span-6 border-r">7</div>
+            <div class="my-auto col-span-6 ">8</div>
+          </div>
+          <div class="col-span-3 grid grid-cols-12">
+            <p class="text-xs leading-5 text-gray-500 col-span-11">
+              Here I have created a search box for a basic search operation to
+              perform on the available list. The twist is its logically perfromed on 
+              old concept usage of a search.
+            </p>
+            <div class="text-2xl m-auto pl-3 text-gray-500">
+              <i class="bi bi-three-dots-vertical"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="m-10 overflow-scroll">
+      <h1 class="text-xl mb-5 dark:text-white">Dropped</h1>
+
+      <div class="border mt-5 bg-white mb-20">
+        <div class="grid grid-cols-12 gap-3 m-5">
+          <div class="relative rounded-full w-20 h-20 overflow-hidden md:h-20 md:w-20">
+            <img src="assets/user.jpg" >
+          </div>
+          <div class="text-left col-span-2">
+            <h3 class="text-xl  text-teal-700">Sanjay Kapoor</h3>
+            <h4 class="text-sm text-gray-500">Manager, Piramal Enterprises</h4>
+            <h4 class="text-sm text-gray-500">Mumbai</h4>
+          </div>
+          <div class="col-span-4 grid grid-cols-12 gap-2 text-center my-auto text-xs">
+            <div class="col-span-3 border-l text-gray-500">
+              <img src="assets/Unhire.png" class="mb-1 mx-auto">
+              No Hire
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500">
+              <img src="assets/Unhire.png" class="mb-1 mx-auto">
+              No Hire
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500 ">
+              <img src="assets/Calender.png" class="mb-1 mx-auto">
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+            <div class="col-span-3 border-l text-gray-500 ">
+              <img src="assets/Calender.png" class="mb-1 mx-auto">
+              <p class="mt-2">1 Sep 2022</p>
+            </div>
+          </div>
+          <div class="col-span-2 grid grid-cols-12 text-center">
+            <div class="my-auto col-span-6 border-r">7</div>
+            <div class="my-auto col-span-6 ">8</div>
+          </div>
+          <div class="col-span-3 grid grid-cols-12">
+            <p class="text-xs leading-5 text-gray-500 col-span-11">
+              Here I have created a search box for a basic search operation to
+              perform on the available list. The twist is its logically perfromed on 
+              old concept usage of a search.
+            </p>
+            <div class="text-2xl m-auto pl-3 text-gray-500">
+              <i class="bi bi-three-dots-vertical"></i>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
